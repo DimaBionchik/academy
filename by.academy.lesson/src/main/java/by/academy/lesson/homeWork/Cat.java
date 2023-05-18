@@ -9,7 +9,7 @@ public class Cat {
 	char initials;
 	boolean isHomeAnimal;
 	String firstname;
-	int money;
+	int money2;
 
 	public Cat() {
 		super();

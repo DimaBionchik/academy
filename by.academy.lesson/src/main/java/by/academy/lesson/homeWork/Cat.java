@@ -8,6 +8,7 @@ public class Cat {
 	int money;
 	char initials;
 	boolean isHomeAnimal;
+	String firstname;
 
 	public Cat() {
 		super();

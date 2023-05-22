@@ -8,8 +8,6 @@ public class Cat {
 	int money;
 	char initials;
 	boolean isHomeAnimal;
-	String firstname;
-	int money2;
 
 	public Cat() {
 		super();
@@ -72,10 +70,9 @@ public class Cat {
 	}
 
 	@Override
-    public String toString() {
-        return "nickname: " + nickname + ", color: " + color + ", weight: " + weight + ", age: " + age;
+	public String toString() {
+		return "nickname: " + nickname + ", color: " + color + ", weight: " + weight + ", age: " + age;
 
 	}
-	
 
 }

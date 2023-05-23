@@ -40,6 +40,7 @@ public class Zadanie2 {
 			System.out.println("Unsupported type");
 			break;
 		}
+	// ChatGPT helped me solve this problem
 
 	}
 

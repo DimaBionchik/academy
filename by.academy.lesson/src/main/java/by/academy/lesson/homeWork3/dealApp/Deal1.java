@@ -8,7 +8,7 @@ public class Deal1 {
 	User buer;
 	User seller;
 	Product[] products;
-	int index = 0;
+	int currentIndex = 0;
 
 	public Deal1() {
 		super();
@@ -98,18 +98,42 @@ public class Deal1 {
 	}
 
 	private void grows() {
-		Product[] temp = new Product[products.length + 1];
+		Product[] temp = new Product[products.length * 2 + 1];
 		System.arraycopy(products, 0, temp, 0, products.length);
 		products = temp;
 
 	}
 
 	public void addProduct(Product p) {
-		if (index >= products.length) {
+
+		if (currentIndex >= products.length) {
 			grows();
 		}
-		products[index++] = p;
+		products[currentIndex++] = p;
 
+	}
+
+	public void remove() {
+		if (currentIndex == 0) {
+			return;
+
+		}
+		products[--currentIndex] = null;
+	}
+
+	public boolean removeProduct(String productToRemove) {
+		for (int i = 0; i < products.length; i++) {
+			Product product = products[i];
+			if (product.getName().equalsIgnoreCase(productToRemove)) {
+
+				for (int j = i; j < products.length - 1; j++) {
+					products[j] = products[j + 1];
+				}
+				products[products.length - 1] = null;
+				return true;
+			}
+		}
+		return false;
 	}
 
 }
